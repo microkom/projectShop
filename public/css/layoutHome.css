@@ -1,0 +1,64 @@
+#banner-top {
+    background-color: #404659;
+    height: 30px;
+}
+
+#banner-mid {
+    background-color: #FF9947;
+    height: 91px;
+    /*padding-top: 18px;*/
+
+}
+
+#login {
+    background-color: #496487;
+    color: white;
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid #496487;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#login:hover {
+    background-color: #364D6A;
+
+}
+
+#banner-bottom {
+    background-color: #404659;
+    height: 40px;
+}
+
+#banner-top-text {
+    font-size: 13px;
+    color: #EBEBED;
+}
+
+#banner-top-title {
+    color: white;
+}
+
+#busqueda {
+    width: 280px;
+}
+
+/* NAVBAR CSS */
+
+.navbar {
+    height: 40px;
+}
+
+.navbar li {
+    margin-right: 50px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/*   MODIFICACION     */
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
