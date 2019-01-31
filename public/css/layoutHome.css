@@ -62,3 +62,77 @@
     width: 100%;
     height: 100%;
 }
+
+/*//////////////////////////////   PRODUCTOS     */
+
+/*--- Tarjetas ---*/
+.card-group {
+    width: 800px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+
+    /*margin-left: 20em;*/
+    background-color: lightgray;
+}
+
+.card img {
+    width: 311px;
+    height: 180px;
+}
+
+.card-title {
+    font-size: 17px;
+
+}
+
+.card-text {
+    text-align: right;
+    font-size: 40px;
+}
+
+.text-muted {
+    font-size: 15px;
+}
+
+
+
+
+/*--- Iconos ---*/
+.glyphicon-heart-empty {
+    margin-left: 20px;
+    /*---- CAMBIAR    */
+    font-size: 25px;
+}
+
+.glyphicon-heart {
+    margin-left: 20px;
+    /*---- CAMBIAR    */
+    font-size: 25px;
+}
+
+.glyphicon-shopping-cart {
+    margin-left: 10px;
+    /*---- CAMBIAR    */
+    font-size: 25px;
+}
+
+
+
+/*--- Favoritos ---*/
+.heart {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    /**left: 50%;**/
+    top: 93%;
+    transform: translate(20%, -50%);
+    background: url(http://imagizer.imageshack.com/img923/4545/XdJDuY.png) no-repeat;
+    cursor: pointer;
+
+}
+
+.heart-blast {
+    background-position: -2800px 0;
+    transition: background 1s steps(28);
+}

@@ -116,9 +116,9 @@
                         INFORMÁTICA
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Portatiles</a>
-                        <a class="dropdown-item" href="#">PC Sobremesa</a>
-                        <a class="dropdown-item" href="#">Tablets</a>
+                        <a class="dropdown-item" href="{{url('category/1/1')}}">Portatiles</a>
+                        <a class="dropdown-item" href="{{url('category/1/2')}}">PC Sobremesa</a>
+                        <a class="dropdown-item" href="{{url('category/1/3')}}">Tablets</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -126,9 +126,9 @@
                         TELEFONÍA
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Smartphones</a>
-                        <a class="dropdown-item" href="#">Smartwatches</a>
-                        <a class="dropdown-item" href="#">Telefonía doméstica</a>
+                        <a class="dropdown-item" href="{{url('category/2/1')}}">Smartphones</a>
+                        <a class="dropdown-item" href="{{url('category/2/2')}}">Smartwatches</a>
+                        <a class="dropdown-item" href="{{url('category/2/3')}}">Telefonía doméstica</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -136,8 +136,8 @@
                         TELEVISIÓN
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Televisores</a>
-                        <a class="dropdown-item" href="#">Mandos a distancia</a>
+                        <a class="dropdown-item" href="{{url('category/3/1')}}">Televisores</a>
+                        <a class="dropdown-item" href="{{url('category/3/2')}}">Mandos a distancia</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -145,9 +145,9 @@
                         FOTOGRAFIA
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Cámaras réflex</a>
-                        <a class="dropdown-item" href="#">Cámaras</a>
-                        <a class="dropdown-item" href="#">Videocámaras deportivas</a>
+                        <a class="dropdown-item" href="{{url('category/4/1')}}">Cámaras réflex</a>
+                        <a class="dropdown-item" href="{{url('category/4/2')}}">Cámaras</a>
+                        <a class="dropdown-item" href="{{url('category/4/3')}}">Videocámaras deportivas</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -155,8 +155,8 @@
                         OCIO
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Consolas</a>
-                        <a class="dropdown-item" href="#">Juegos</a>
+                        <a class="dropdown-item" href="{{url('category/5/1')}}">Consolas</a>
+                        <a class="dropdown-item" href="{{url('category/5/2')}}">Juegos</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">

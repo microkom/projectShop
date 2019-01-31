@@ -47,6 +47,64 @@
                 <div class="col-md-2">
                 </div>
                 <div class="col-md-8">
+                <div class="card-group">
+                <div class="card">
+                    <img class="card-img-top" src="/img/productos/acer01.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre Producto1</h5>
+                        <p class="card-text">250€</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Vendidos 20</small>
+                        <a class="heart"></a>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="/img/productos/acer02.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre Producto2</h5>
+                        <p class="card-text">175€</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Vendidos 15</small>
+                        <a class="heart"></a>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="/img/productos/apple01.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre Producto3</h5>
+                        <p class="card-text">350€</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Vendidos 37</small>
+                        <a class="heart"></a>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="/img/productos/apple01.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre Producto4</h5>
+                        <p class="card-text">565€</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Vendidos 37</small>
+                        <a class="heart"></a>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
                 </div>
                 <div class="col-md-2">
                 </div>

@@ -13,4 +13,6 @@
 
 Route::get('/', 'HomeController@getHome');
 
-Route::get('category/{id}', 'CategoryController@getCategory');
+Route::get('category/{category}', 'CategoryController@getCategory');
+
+Route::get('category/{category}/{subCategory}', 'CategoryController@getSubCategory');
