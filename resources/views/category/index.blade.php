@@ -20,7 +20,7 @@
 <div class="card-group">
 
     <div class="card">
-        <div><img class="card-img-top" src="{{url('img/'.$producto->imgRoute)}}" width="100%" height="50%" alt="Card image cap"></div>
+        <div><img class="card-img-top" src="{{url('img/'.$producto->imgRoute)}}" alt="Card image cap"></div>
         <div class="card-body">
             <h5 class="card-title">{{$producto->brand}} {{$producto->model}}</h5>
             <p class="card-text">{{$producto->price}}€</p>
