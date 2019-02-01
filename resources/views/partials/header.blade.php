@@ -24,7 +24,7 @@
     <div class="col-md-2">
     </div>
 </div>
-<div class="row" id="banner-mid">
+<div class="row " id="banner-mid">
     <div class="col-md-2">
     </div>
     <div class="col-md-8">
@@ -69,20 +69,20 @@
                                         aria-labelledby="nav-home-tab">
                                         <form action="#" method="post">
                                             <label for="username">Usuario</label><br />
-                                            <input type="text" name="username" id="username"><br />
+                                            <input type="text" name="username" id="usernameLogin"><br />
                                             <label for="password">Contraseña</label><br />
-                                            <input type="password" name="password" id="password"><br /><br />
+                                            <input type="password" name="password" id="passwordLogin"><br /><br />
                                             <input type="submit" class="btn btn-success" value="Iniciar sesión">
                                         </form>
                                     </div>
                                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                                         <form action="#" method="post">
                                             <label for="username">Usuario</label><br />
-                                            <input type="text" name="username" id="username"><br />
+                                            <input type="text" name="username" id="usernameSignup"><br />
                                             <label for="email">Correo electrónico</label><br />
                                             <input type="email" name="email" id="email"><br />
                                             <label for="password">Contraseña</label><br />
-                                            <input type="password" name="password" id="password"><br />
+                                            <input type="password" name="password" id="passwordSignup"><br />
                                             <label for="password">Repetir contraseña</label><br />
                                             <input type="password" name="password2" id="password2"><br /><br />
                                             <input type="submit" class="btn btn-success" value="Registrarse">
@@ -112,61 +112,61 @@
 
                 <!-- Dropdown -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="{{url('category/1')}}" id="navbardrop">
+                    <a class="nav-link dropdown-toggle" href="{{url('category/informatica')}}" id="navbardrop">
                         INFORMÁTICA
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{{url('category/1/1')}}">Portatiles</a>
-                        <a class="dropdown-item" href="{{url('category/1/2')}}">PC Sobremesa</a>
-                        <a class="dropdown-item" href="{{url('category/1/3')}}">Tablets</a>
+                        <a class="dropdown-item" href="{{url('category/informatica/portatiles')}}">Portatiles</a>
+                        <a class="dropdown-item" href="{{url('category/informatica/pc sobremesa')}}">PC Sobremesa</a>
+                        <a class="dropdown-item" href="{{url('category/informatica/tablets')}}">Tablets</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="{{url('category/2')}}" id="navbardrop">
+                    <a class="nav-link dropdown-toggle" href="{{url('category/telefonia')}}" id="navbardrop">
                         TELEFONÍA
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{{url('category/2/1')}}">Smartphones</a>
-                        <a class="dropdown-item" href="{{url('category/2/2')}}">Smartwatches</a>
-                        <a class="dropdown-item" href="{{url('category/2/3')}}">Telefonía doméstica</a>
+                        <a class="dropdown-item" href="{{url('category/telefonia/smartphones')}}">Smartphones</a>
+                        <a class="dropdown-item" href="{{url('category/telefonia/smartwatches')}}">Smartwatches</a>
+                        <a class="dropdown-item" href="{{url('category/telefonia/telefonia domestica')}}">Telefonía doméstica</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="{{url('category/3')}}" id="navbardrop">
+                    <a class="nav-link dropdown-toggle" href="{{url('category/television')}}" id="navbardrop">
                         TELEVISIÓN
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{{url('category/3/1')}}">Televisores</a>
-                        <a class="dropdown-item" href="{{url('category/3/2')}}">Mandos a distancia</a>
+                        <a class="dropdown-item" href="{{url('category/television/televisores')}}">Televisores</a>
+                        <a class="dropdown-item" href="{{url('category/television/mandos a distancia')}}">Mandos a distancia</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="{{url('category/4')}}" id="navbardrop">
+                    <a class="nav-link dropdown-toggle" href="{{url('category/fotografia')}}" id="navbardrop">
                         FOTOGRAFIA
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{{url('category/4/1')}}">Cámaras réflex</a>
-                        <a class="dropdown-item" href="{{url('category/4/2')}}">Cámaras</a>
-                        <a class="dropdown-item" href="{{url('category/4/3')}}">Videocámaras deportivas</a>
+                        <a class="dropdown-item" href="{{url('category/fotografia/camaras reflex')}}">Cámaras réflex</a>
+                        <a class="dropdown-item" href="{{url('category/fotografia/camaras evil')}}">Cámaras Evil</a>
+                        <a class="dropdown-item" href="{{url('category/fotografia/videocamaras deportivas')}}">Videocámaras deportivas</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="{{url('category/5')}}" id="navbardrop">
+                    <a class="nav-link dropdown-toggle" href="{{url('category/ocio')}}" id="navbardrop">
                         OCIO
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{{url('category/5/1')}}">Consolas</a>
-                        <a class="dropdown-item" href="{{url('category/5/2')}}">Juegos</a>
+                        <a class="dropdown-item" href="{{url('category/ocio/consolas')}}">Consolas</a>
+                        <a class="dropdown-item" href="{{url('category/ocio/juegos')}}">Juegos</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="{{url('category/6')}}" id="navbardrop">
+                    <a class="nav-link dropdown-toggle" href="{{url('category/accesorios')}}" id="navbardrop">
                         ACCESORIOS
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Link 1</a>
-                        <a class="dropdown-item" href="#">Link 2</a>
-                        <a class="dropdown-item" href="#">Link 3</a>
+                        <a class="dropdown-item" href="{{url('category/accesorios/cables')}}">Cables</a>
+                        <a class="dropdown-item" href="{{url('category/accesorios/cargadores')}}">Cargadores</a>
+                        <a class="dropdown-item" href="{{url('category/accesorios/baterias')}}">Baterias</a>
                     </div>
                 </li>
             </ul>

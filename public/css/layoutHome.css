@@ -10,6 +10,11 @@
 
 }
 
+.tituloCategoria {
+    text-transform: uppercase;
+    text-align: center;
+}
+
 #login {
     background-color: #496487;
     color: white;
@@ -67,18 +72,16 @@
 
 /*--- Tarjetas ---*/
 .card-group {
-    width: 800px;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
 
     /*margin-left: 20em;*/
     background-color: lightgray;
 }
 
 .card img {
-    width: 311px;
-    height: 180px;
+    width: 80%;
+    height: 80%;
 }
 
 .card-title {
