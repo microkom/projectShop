@@ -1,9 +1,11 @@
 @extends('layouts.master')
 
 @section('content')
-    Categoria {{$category}} <br>
+    Categoria {{$category}}
 
-    Subcategoria {{$subcategory}}
+    @if (isset($subCategory))
+    Subcategoria {{$subCategory}}
+    @endif
 
 
 

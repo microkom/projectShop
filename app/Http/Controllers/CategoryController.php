@@ -11,6 +11,6 @@ class CategoryController extends Controller
 
     public function getSubCategory($category, $subCategory)
     {
-        return view('category.index', array('category' => $category, 'subcategory' => $subCategory));
+        return view('category.index', array('category' => $category, 'subCategory' => $subCategory));
     }
 }
