@@ -16,8 +16,7 @@
                 <strong id="banner-top-title" class="align-middle">TIENDA DE COMPONENTES ELECTRÓNICOS</strong>
             </div>
             <div class="col-md-6" id="banner-top-text">
-                <span class="align-middle">Mi cuenta | Nuevos productos | Noticias | Carrito | Formas de Envio
-                    | Metodos de pago</span>
+                <span class="align-middle">Nuevos productos | Carrito | Formas de Envio | Metodos de pago</span>
             </div>
         </div>
     </div>
@@ -33,10 +32,12 @@
                 <a href="{{url('/')}}"><img width="179" src="{{url('img/daw_electronics.png')}}"></a>
             </div>
             <div class="col-md-4">
-                <form class="example" action="/action_page.php">
+            <div class="search-container">
+                <form class="buscar" action="/action_page.php">
                     <input type="text" name="" id="busqueda" placeholder="Busca aqui">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
+            </div>
             </div>
             <div class="col-md-3">
                 <button type="button" id="login" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
@@ -95,7 +96,7 @@
                 </div>
             </div>
             <div class="col-md-2">
-                CARRITO / $0.00
+                <div id="carrito">CARRITO / $0.00</div>
             </div>
         </div>
     </div>

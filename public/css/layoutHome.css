@@ -18,7 +18,8 @@
 #login {
     background-color: #496487;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
+    margin-top: 25px;
     padding: 5px;
     border: 1px solid #496487;
     border-radius: 5px;
@@ -28,6 +29,10 @@
 #login:hover {
     background-color: #364D6A;
 
+}
+
+.buscar, #carrito {
+    margin-top: 25px;
 }
 
 #banner-bottom {
@@ -45,7 +50,7 @@
 }
 
 #busqueda {
-    width: 220px;
+    width: 200px;
 }
 
 /* NAVBAR CSS */
