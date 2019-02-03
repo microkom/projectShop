@@ -18,6 +18,7 @@ class CategoryController extends Controller
 
     public function getSubCategory($category, $subCategory)
     {
+        $categoryId = Category::where('name', $category)->first()->id;
         return view('category.index', array('category' => $category, 'subCategory' => $subCategory));
     }
 }

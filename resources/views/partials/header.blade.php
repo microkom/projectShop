@@ -12,10 +12,10 @@
     </div>
     <div class="col-md-8">
         <div class="row">
-            <div class="col-md-5">
+            <div class="col-md-6">
                 <strong id="banner-top-title" class="align-middle">TIENDA DE COMPONENTES ELECTRÓNICOS</strong>
             </div>
-            <div class="col-md-7" id="banner-top-text">
+            <div class="col-md-6" id="banner-top-text">
                 <span class="align-middle">Mi cuenta | Nuevos productos | Noticias | Carrito | Formas de Envio
                     | Metodos de pago</span>
             </div>
@@ -112,17 +112,17 @@
 
                 <!-- Dropdown -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="{{url('category/informatica')}}" id="navbardrop">
+                    <a class="nav-link dropdown" href="{{url('category/informatica')}}" id="navbardrop" >
                         INFORMÁTICA
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="{{url('category/informatica/portatiles')}}">Portatiles</a>
-                        <a class="dropdown-item" href="{{url('category/informatica/pc sobremesa')}}">PC Sobremesa</a>
+                        <a class="dropdown-item" href="{{url('category/informatica/pcsobremesa')}}">PC Sobremesa</a>
                         <a class="dropdown-item" href="{{url('category/informatica/tablets')}}">Tablets</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="{{url('category/telefonia')}}" id="navbardrop">
+                    <a class="nav-link dropdown" href="{{url('category/telefonia')}}" id="navbardrop">
                         TELEFONÍA
                     </a>
                     <div class="dropdown-menu">
@@ -132,7 +132,7 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="{{url('category/television')}}" id="navbardrop">
+                    <a class="nav-link dropdown" href="{{url('category/television')}}" id="navbardrop">
                         TELEVISIÓN
                     </a>
                     <div class="dropdown-menu">
@@ -141,7 +141,7 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="{{url('category/fotografia')}}" id="navbardrop">
+                    <a class="nav-link dropdown" href="{{url('category/fotografia')}}" id="navbardrop">
                         FOTOGRAFIA
                     </a>
                     <div class="dropdown-menu">
@@ -151,7 +151,7 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="{{url('category/ocio')}}" id="navbardrop">
+                    <a class="nav-link dropdown" href="{{url('category/ocio')}}" id="navbardrop">
                         OCIO
                     </a>
                     <div class="dropdown-menu">
@@ -160,7 +160,7 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="{{url('category/accesorios')}}" id="navbardrop">
+                    <a class="nav-link dropdown" href="{{url('category/accesorios')}}" id="navbardrop">
                         ACCESORIOS
                     </a>
                     <div class="dropdown-menu">
@@ -168,8 +168,10 @@
                         <a class="dropdown-item" href="{{url('category/accesorios/cargadores')}}">Cargadores</a>
                         <a class="dropdown-item" href="{{url('category/accesorios/baterias')}}">Baterias</a>
                     </div>
+                    
                 </li>
             </ul>
+            
         </nav>
     </div>
     <div class="col-md-2">
