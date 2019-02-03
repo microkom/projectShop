@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Product;
+use App\Subcategory;
 
 class CategoryController extends Controller
 {
@@ -19,6 +20,8 @@ class CategoryController extends Controller
     public function getSubCategory($category, $subCategory)
     {
         $categoryId = Category::where('name', $category)->first()->id;
-        return view('category.index', array('category' => $category, 'subCategory' => $subCategory));
+        $subcategoryId = Subcategory::where('name', $subCategory)->first()->id;
+        $arrayProductos = Product::where('categoryid', $categoryId)->where('subcategoryid', $subcategoryId)->get();
+        return view('category.index', array('arrayProductos' => $arrayProductos, 'category' => $category, 'subCategory' => $subCategory));
     }
 }

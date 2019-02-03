@@ -31,56 +31,27 @@
 
             @include('partials.header')
 
-
+        </div>
             <!----------------       ULTIMOS PRODUCTOS       ---------------->
 
-            <div class="row">
-                <div class="col-md-2">
-                </div>
-                <div class="col-md-8">
+        <div class="anchoTarjetas">                
                 @yield('content')
-                </div>
-                <div class="col-md-2">
-                </div>
+                            
+                <div class="anchoTarjetas">
+            @yield('content1')
             </div>
-            <div class="row">
-                <div class="col-md-2">
-                </div>
-                <div class="col-md-8">
+            <div >
+            
                 @yield('productos')
-                </div>
-                <div class="col-md-2">
-                </div>
+            
             </div>
             <div class="row">
-                <div class="col-md-2">
-                </div>
-                <div class="col-md-8">
-                </div>
-                <div class="col-md-2">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-2">
-                </div>
-                <div class="col-md-8">
-                </div>
-                <div class="col-md-2">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-2">
-                </div>
-                <div class="col-md-2">
-                </div>
-                <div class="col-md-2">
-                </div>
-                <div class="col-md-4">
-                </div>
-                <div class="col-md-2">
-                </div>
+                <div class="col-md-2">                </div>
+                <div class="col-md-8">                </div>
+                <div class="col-md-2">                </div>
             </div>
         </div>
+           
 
         <!----------------       Scripts       ---------------->
 

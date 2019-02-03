@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('productos')
+@section('content')
 <div class="tituloCategoria">
     <h1>
     @if (isset($subCategory))
@@ -8,28 +8,27 @@
     @else
         {{$category}}
     @endif
-
-    </h1>
-</div>
-
-
-
+</h1>
+   
+</div> 
+@stop
+@section('content1')
 
 @foreach ($arrayProductos as $producto)
-
-<div class="card-group">
+<div class="cardGen">
 
     <div class="card">
-        <div><img class="card-img-top" src="{{url('img/'.$producto->imgRoute)}}" alt="Card image cap"></div>
+        <div><a href="{{url('products/'.$producto->id)}}"><img class="card-img-top" src="{{url('img/'.$producto->imgRoute)}}" alt="Card image cap"></a></div>
         <div class="card-body">
-            <h5 class="card-title">{{$producto->brand}} {{$producto->model}}</h5>
+        <a href="{{url('products/'.$producto->id)}}"><h5 class="card-title">{{$producto->brand}} {{$producto->model}}</h5></a>
             <p class="card-text">{{$producto->price}}€</p>
         </div>
         <div class="card-footer">
-            <small class="text-muted">Vendidos 20</small>
-            <a class="heart"></a>
+        <button type="button" class="btn btn-primary">Comprar</button>            
+            <!-- <a class="heart"></a> -->
             <a href="#">
-                <span class="glyphicon glyphicon-shopping-cart"></span>
+                <!-- <span class="glyphicon glyphicon-shopping-cart"></span> -->
+                <small class="text-muted">Stock {{$producto->stock}}</small>
             </a>
         </div>
     </div>
