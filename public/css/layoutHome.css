@@ -35,19 +35,13 @@
     margin-top: 25px;
 }
 
-.cart_anchor{ 
-    float:right; 
-    vertical-align:top; 
+.cart_anchor {
+    float: right;
+    vertical-align: top;
     background: url('../img/carrito.svg') no-repeat center center / 100% auto;
     width: 50px;
-    height: 50px; 
+    height: 50px;
     margin-top: 12px;
-}
-
-#banner-bottom {
-    background-color: #404659;
-    height: 40px;
-   
 }
 
 #banner-top-text {
@@ -65,8 +59,9 @@
 
 /* NAVBAR CSS */
 
+#banner-bottom,
 .navbar {
-    height: 40px;
+    background-color: #404659;
 }
 
 .navbar li {
@@ -75,7 +70,7 @@
 }
 
 .dropdown:hover .dropdown-menu {
-  display: block;
+    display: block;
 }
 
 /*   MODIFICACION     */
@@ -97,8 +92,8 @@
 }
 
 .anchoTarjetas {
-    width:900px;
-    margin:auto;
+    width: 900px;
+    margin: auto;
 }
 
 .card a {
@@ -111,18 +106,20 @@
 
 .card {
     float: left;
-  width: 220px;
-  padding: 10px;
-  height: 400px;
+    width: 220px;
+    padding: 10px;
+    height: 400px;
 }
-.cardGen{
+
+.cardGen {
     display: inline-block;
 }
+
 .cardGen:after {
     content: "";
     display: table;
     clear: both;
-  }
+}
 
 .card>img {
     width: 80px;

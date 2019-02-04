@@ -105,76 +105,84 @@
 </div>
 
 <div class="row" id="banner-bottom">
-    <div class="col-md-2">
-    </div>
-    <div class="col-md-8">
-        <nav class="navbar navbar-expand-sm navbar-dark">
-            <ul class="navbar-nav">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown" href="{{url('category/informatica')}}" id="navbardrop">
+                                INFORMÁTICA
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="{{url('category/informatica/portatiles')}}">Portatiles</a>
+                                <a class="dropdown-item" href="{{url('category/informatica/pc sobremesa')}}">PC
+                                    Sobremesa</a>
+                                <a class="dropdown-item" href="{{url('category/informatica/tablets')}}">Tablets</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown" href="{{url('category/telefonia')}}" id="navbardrop">
+                                TELEFONÍA
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="{{url('category/telefonia/smartphones')}}">Smartphones</a>
+                                <a class="dropdown-item" href="{{url('category/telefonia/smartwatches')}}">Smartwatches</a>
+                                <a class="dropdown-item" href="{{url('category/telefonia/telefonia domestica')}}">Telefonía
+                                    doméstica</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown" href="{{url('category/television')}}" id="navbardrop">
+                                TELEVISIÓN
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="{{url('category/television/televisores')}}">Televisores</a>
+                                <a class="dropdown-item" href="{{url('category/television/proyectores')}}">Proyectores</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown" href="{{url('category/fotografia')}}" id="navbardrop">
+                                FOTOGRAFIA
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="{{url('category/fotografia/camaras reflex')}}">Cámaras
+                                    réflex</a>
+                                <a class="dropdown-item" href="{{url('category/fotografia/camaras evil')}}">Cámaras
+                                    Evil</a>
+                                <a class="dropdown-item" href="{{url('category/fotografia/videocamaras deportivas')}}">Videocámaras
+                                    deportivas</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown" href="{{url('category/ocio')}}" id="navbardrop">
+                                OCIO
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="{{url('category/ocio/consolas')}}">Consolas</a>
+                                <a class="dropdown-item" href="{{url('category/ocio/juegos')}}">Juegos</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown" href="{{url('category/accesorios')}}" id="navbardrop">
+                                ACCESORIOS
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="{{url('category/accesorios/cables')}}">Cables</a>
+                                <a class="dropdown-item" href="{{url('category/accesorios/cargadores')}}">Cargadores</a>
+                                <a class="dropdown-item" href="{{url('category/accesorios/baterias')}}">Baterias</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
-                <!-- Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown" href="{{url('category/informatica')}}" id="navbardrop" >
-                        INFORMÁTICA
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{{url('category/informatica/portatiles')}}">Portatiles</a>
-                        <a class="dropdown-item" href="{{url('category/informatica/pc sobremesa')}}">PC Sobremesa</a>
-                        <a class="dropdown-item" href="{{url('category/informatica/tablets')}}">Tablets</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown" href="{{url('category/telefonia')}}" id="navbardrop">
-                        TELEFONÍA
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{{url('category/telefonia/smartphones')}}">Smartphones</a>
-                        <a class="dropdown-item" href="{{url('category/telefonia/smartwatches')}}">Smartwatches</a>
-                        <a class="dropdown-item" href="{{url('category/telefonia/telefonia domestica')}}">Telefonía doméstica</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown" href="{{url('category/television')}}" id="navbardrop">
-                        TELEVISIÓN
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{{url('category/television/televisores')}}">Televisores</a>
-                        <a class="dropdown-item" href="{{url('category/television/proyectores')}}">Proyectores</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown" href="{{url('category/fotografia')}}" id="navbardrop">
-                        FOTOGRAFIA
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{{url('category/fotografia/camaras reflex')}}">Cámaras réflex</a>
-                        <a class="dropdown-item" href="{{url('category/fotografia/camaras evil')}}">Cámaras Evil</a>
-                        <a class="dropdown-item" href="{{url('category/fotografia/videocamaras deportivas')}}">Videocámaras deportivas</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown" href="{{url('category/ocio')}}" id="navbardrop">
-                        OCIO
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{{url('category/ocio/consolas')}}">Consolas</a>
-                        <a class="dropdown-item" href="{{url('category/ocio/juegos')}}">Juegos</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown" href="{{url('category/accesorios')}}" id="navbardrop">
-                        ACCESORIOS
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{{url('category/accesorios/cables')}}">Cables</a>
-                        <a class="dropdown-item" href="{{url('category/accesorios/cargadores')}}">Cargadores</a>
-                        <a class="dropdown-item" href="{{url('category/accesorios/baterias')}}">Baterias</a>
-                    </div>
-                    
-                </li>
-            </ul>
-            
-        </nav>
-    </div>
+        </div>
     <div class="col-md-2">
     </div>
 </div>
