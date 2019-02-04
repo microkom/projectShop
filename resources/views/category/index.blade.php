@@ -18,16 +18,13 @@
 <div class="cardGen">
 
     <div class="card">
-        <div><a href="{{url('products/'.$producto->id)}}"><img class="card-img-top" src="{{url('img/'.$producto->imgRoute)}}" alt="Card image cap"></a></div>
+        <div><a href="{{url('product/'.$producto->id)}}"><img class="card-img-top" src="{{url('img/'.$producto->imgRoute)}}" alt="Card image cap"></a></div>
         <div class="card-body">
-        <a href="{{url('products/'.$producto->id)}}"><h5 class="card-title">{{$producto->brand}} {{$producto->model}}</h5></a>
+        <a href="{{url('product/'.$producto->id)}}"><h5 class="card-title">{{$producto->brand}} {{$producto->model}}</h5></a>
             <p class="card-text">{{$producto->price}}€</p>
         </div>
         <div class="card-footer">
-        <button type="button" class="btn btn-primary">Comprar</button>            
-            <!-- <a class="heart"></a> -->
-            <a href="#">
-                <!-- <span class="glyphicon glyphicon-shopping-cart"></span> -->
+         <button type="button" class="btn btn-primary">Comprar</button>
                 <small class="text-muted">Stock {{$producto->stock}}</small>
             </a>
         </div>

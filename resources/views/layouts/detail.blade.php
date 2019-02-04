@@ -11,6 +11,11 @@
         <meta name="description" content="Página principal del Proyecto DAW Electronics">
         <meta name="grupoDAW" content="">
 
+        <!--GLYPHICON-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
         <!-- BOOTSTRAP -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <!-- FUENTES -->
@@ -18,25 +23,14 @@
         <!-- CSS -->
         <link href="{{asset('css/layoutHome.css')}}" rel="stylesheet">
 
+        <!-- Estilo Carrito -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-        <script type='text/javascript' src="../../js/fly.js"></script>
     </head>
-    <script type="text/javascript">
-$(document).ready(function(){
-    $('.add-to-cart').on('click',function(){
-        //Scroll to top if cart icon is hidden on top
-        $('html, body').animate({
-            'scrollTop' : $(".cart_anchor").position().top
-        });
-        //Select item image and pass to the function
-        var itemImg = $(this).parent().find('img').eq(0);
-        flyToElement($(itemImg), $('.cart_anchor'));
-    });
-});
-</script>
     <body>
 
         <div class="container-fluid">
@@ -45,27 +39,20 @@ $(document).ready(function(){
 
             @include('partials.header')
 
-        </div>
+
             <!----------------       ULTIMOS PRODUCTOS       ---------------->
 
-        <div class="anchoTarjetas">                
-                @yield('content')
-                            
-                <div class="anchoTarjetas">
-            @yield('content1')
-            </div>
-            <div >
-            
-                @yield('productos')
-            
-            </div>
             <div class="row">
-                <div class="col-md-2">                </div>
-                <div class="col-md-8">                </div>
-                <div class="col-md-2">                </div>
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-8 width-900">
+                @yield('content')
+                </div>
+                <div class="col-md-2">
+                </div>
             </div>
+    
         </div>
-           
 
         <!----------------       Scripts       ---------------->
 

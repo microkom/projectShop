@@ -96,7 +96,7 @@
                 </div>
             </div>
             <div class="col-md-2">
-                <div id="carrito">CARRITO / $0.00</div>
+                <div class="cart_anchor"></div>
             </div>
         </div>
     </div>
@@ -118,7 +118,7 @@
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="{{url('category/informatica/portatiles')}}">Portatiles</a>
-                        <a class="dropdown-item" href="{{url('category/informatica/pcsobremesa')}}">PC Sobremesa</a>
+                        <a class="dropdown-item" href="{{url('category/informatica/pc sobremesa')}}">PC Sobremesa</a>
                         <a class="dropdown-item" href="{{url('category/informatica/tablets')}}">Tablets</a>
                     </div>
                 </li>
@@ -138,7 +138,7 @@
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="{{url('category/television/televisores')}}">Televisores</a>
-                        <a class="dropdown-item" href="{{url('category/television/mandos a distancia')}}">Mandos a distancia</a>
+                        <a class="dropdown-item" href="{{url('category/television/proyectores')}}">Proyectores</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
