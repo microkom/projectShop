@@ -4,10 +4,9 @@
 }
 
 #banner-mid {
-    background-color: #FF9947;
+    background-color: #ff9947;
     height: 91px;
     /*padding-top: 18px;*/
-
 }
 
 .tituloCategoria {
@@ -27,8 +26,7 @@
 }
 
 #login:hover {
-    background-color: #364D6A;
-
+    background-color: #364d6a;
 }
 
 .buscar {
@@ -38,7 +36,7 @@
 .cart_anchor {
     float: right;
     vertical-align: top;
-    background: url('../img/carrito.svg') no-repeat center center / 100% auto;
+    background: url("../img/carrito.svg") no-repeat center center / 100% auto;
     width: 50px;
     height: 50px;
     margin-top: 12px;
@@ -46,7 +44,8 @@
 
 #banner-top-text {
     font-size: 13px;
-    color: #EBEBED;
+    color: #ebebed;
+    text-align: right;
 }
 
 #banner-top-title {
@@ -86,7 +85,6 @@
     display: flex;
     flex-wrap: wrap;
 
-
     /*margin-left: 20em;*/
     background-color: lightgray;
 }
@@ -121,14 +119,13 @@
     clear: both;
 }
 
-.card>img {
+.card > img {
     width: 80px;
     height: 80px;
 }
 
 .card-title {
     font-size: 17px;
-
 }
 
 .card-text {

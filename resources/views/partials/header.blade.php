@@ -11,14 +11,22 @@
     <div class="col-md-2">
     </div>
     <div class="col-md-8">
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-6">
                 <strong id="banner-top-title" class="align-middle">TIENDA DE COMPONENTES ELECTRÓNICOS</strong>
             </div>
             <div class="col-md-6" id="banner-top-text">
                 <span class="align-middle">Nuevos productos | Carrito | Formas de Envio | Metodos de pago</span>
             </div>
+        </div> -->
+        <div class="row">
+            <div class="col-sm-6 col-md-6" id="banner-top-title">
+                <strong>TIENDA DE COMPONENTES ELECTRÓNICOS</strong>
+            </div>
+        <div class="d-none d-lg-block col-sm-6" id="banner-top-text">
+            Nuevos productos | Carrito | Formas de Envio | Metodos de pago
         </div>
+</div>
     </div>
     <div class="col-md-2">
     </div>
@@ -104,17 +112,18 @@
     </div>
 </div>
 
-<div class="row" id="banner-bottom">
+<div class="row align-center" id="banner-bottom">
         <div class="col-md-2">
         </div>
         <div class="col-md-8">
+        <div class="mx-auto" style="width: 900px;">
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
+                <ul class="navbar-nav">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown" href="{{url('category/informatica')}}" id="navbardrop">
                                 INFORMÁTICA
@@ -181,7 +190,7 @@
                     </ul>
                 </div>
             </nav>
-
+            </div>
         </div>
     <div class="col-md-2">
     </div>
