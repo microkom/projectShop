@@ -16,3 +16,11 @@ Route::get('/', 'HomeController@getHome');
 Route::get('category/{category}', 'CategoryController@getCategory');
 
 Route::get('category/{category}/{subCategory}', 'CategoryController@getSubCategory');
+
+Route::any('/search',function(){
+    $q = Input::get ( 'q' );
+    $product = Products::where('name','LIKE','%'.$q.'%')->orWhere('description','LIKE','%'.$q.'%')->get();
+    if(count($product) > 0)
+        return view('welcome')->withDetails($product)->withQuery ( $q );
+    else return view ('welcome')->withMessage('No Details found. Try to search again !');
+});

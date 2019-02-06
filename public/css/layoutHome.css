@@ -1,173 +1,173 @@
 #banner-top {
-    background-color: #404659;
-    height: 30px;
+	background-color: #404659;
+	height: 30px;
 }
 
 #banner-mid {
-    background-color: #FF9947;
-    height: 91px;
-    /*padding-top: 18px;*/
+	background-color: #FF9947;
+	height: 91px;
+	/*padding-top: 18px;*/
 
 }
 
 .tituloCategoria {
-    text-transform: uppercase;
-    text-align: center;
+	text-transform: uppercase;
+	text-align: center;
 }
 
 #login {
-    background-color: #496487;
-    color: white;
-    font-size: 14px;
-    padding: 5px;
-    border: 1px solid #496487;
-    border-radius: 5px;
-    font-weight: bold;
+	background-color: #496487;
+	color: white;
+	font-size: 14px;
+	padding: 5px;
+	border: 1px solid #496487;
+	border-radius: 5px;
+	font-weight: bold;
 }
 
 #login:hover {
-    background-color: #364D6A;
+	background-color: #364D6A;
 
 }
 
 #banner-bottom {
-    background-color: #404659;
-   
+	background-color: #404659;
+
 }
 
 #banner-top-text {
-    font-size: 13px;
-    color: #EBEBED;
+	font-size: 13px;
+	color: #EBEBED;
 }
 
 #banner-top-title {
-    color: white;
+	color: white;
 }
 
 #busqueda {
-    width: 220px;
+	width: 220px;
 }
 
 /* NAVBAR CSS */
 
 .navbar {
-    height: 40px;
+	height: 40px;
 }
 
 .navbar li {
-    margin-right: 40px;
-    height: 37px;
+	margin-right: 40px;
+	height: 37px;
 }
 
 .dropdown:hover .dropdown-menu {
-  display: block;
+	display: block;
 }
 
 /*   MODIFICACION     */
 .carousel-inner img {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 }
 
 /*//////////////////////////////   PRODUCTOS     */
 
 /*--- Tarjetas ---*/
 .card-group {
-    display: flex;
-    flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 
 
-    /*margin-left: 20em;*/
-    background-color: lightgray;
+	/*margin-left: 20em;*/
+	background-color: lightgray;
 }
 
 .anchoTarjetas {
-    width:900px;
-    margin:auto;
+	width:900px;
+	margin:auto;
 }
 
 .card a {
-    color: black;
+	color: black;
 }
 
 .card a:hover {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .card {
-    float: left;
-  width: 220px;
-  padding: 10px;
-  height: 400px;
+	float: left;
+	width: 250px;
+	padding: 10px;
+	height: 400px;
 }
 .cardGen{
-    display: inline-block;
+	display: inline-block;
 }
 .cardGen:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+	content: "";
+	display: table;
+	clear: both;
+}
 
 .card>img {
-    width: 80px;
-    height: 80px;
+	width: 80px;
+	height: 80px;
 }
 
 .card-title {
-    font-size: 17px;
+	font-size: 17px;
 
 }
 
 .card-text {
-    text-align: right;
-    font-size: 40px;
+	text-align: right;
+	font-size: 40px;
 }
 
 .text-muted {
-    font-size: 15px;
+	font-size: 15px;
 }
 
 .w900{
-    max-width: 900px;
+	max-width: 900px;
 }
 
 
 /*--- Iconos ---*/
 .glyphicon-heart-empty {
-    margin-left: 20px;
-    /*---- CAMBIAR    */
-    font-size: 25px;
+	margin-left: 20px;
+	/*---- CAMBIAR    */
+	font-size: 25px;
 }
 
 .glyphicon-heart {
-    margin-left: 20px;
-    /*---- CAMBIAR    */
-    font-size: 25px;
+	margin-left: 20px;
+	/*---- CAMBIAR    */
+	font-size: 25px;
 }
 
 .glyphicon-shopping-cart {
-    margin-left: 10px;
-    /*---- CAMBIAR    */
-    font-size: 25px;
+	margin-left: 10px;
+	/*---- CAMBIAR    */
+	font-size: 25px;
 }
 
 
 
 /*--- Favoritos ---*/
-.heart {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    /**left: 50%;**/
-    top: 93%;
-    transform: translate(20%, -50%);
-    background: url(http://imagizer.imageshack.com/img923/4545/XdJDuY.png) no-repeat;
-    cursor: pointer;
+/*.heart {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 50%;
+	top: 93%;
+	transform: translate(40px, 50);
+	background: url(http://imagizer.imageshack.com/img923/4545/XdJDuY.png) no-repeat;
+	cursor: pointer;
 
-}
-
+}*/
+/*
 .heart-blast {
-    background-position: -2800px 0;
-    transition: background 1s steps(28);
-}
+	background-position: -2800px 0;
+	transition: background 1s steps(28);
+}*/
