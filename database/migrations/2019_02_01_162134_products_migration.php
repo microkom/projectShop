@@ -15,7 +15,8 @@ class ProductsMigration extends Migration
     {
         Schema::create('Products', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('object');
+            $table->string('name')->nullable();
             $table->string('brand');
             $table->string('model')->nullable();
             $table->text('description')->nullable();

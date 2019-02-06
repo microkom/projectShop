@@ -24,19 +24,6 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
         <script type='text/javascript' src="../../js/fly.js"></script>
     </head>
-    <script type="text/javascript">
-$(document).ready(function(){
-    $('.add-to-cart').on('click',function(){
-        //Scroll to top if cart icon is hidden on top
-        $('html, body').animate({
-            'scrollTop' : $(".cart_anchor").position().top
-        });
-        //Select item image and pass to the function
-        var itemImg = $(this).parent().find('img').eq(0);
-        flyToElement($(itemImg), $('.cart_anchor'));
-    });
-});
-</script>
     <body>
 
         <div class="container-fluid">

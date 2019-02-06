@@ -40,14 +40,13 @@
             </div>
             </div>
             <div class="d-none d-sm-block col-xl-3 col-md-4 col-sm-6">
-                <button type="button" id="login" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                <button type="button" id="login" class="btn btn-primary" data-toggle="modal" data-target="#modalLogin">
                     INICIAR SESIÓN / REGISTRARSE
                 </button>
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="modalLogin">
                     <div class="modal-dialog">
                         <div class="modal-content">
-
                             <!-- Modal Header -->
                             <div class="modal-header">
                                 <h4 class="modal-title text-center">INICIAR SESIÓN / REGISTRARSE</h4>
@@ -96,7 +95,13 @@
                 </div>
             </div>
             <div class="d-none d-md-block col-xl-2 col-md-4">
-                <div class="cart_anchor"></div>
+                <!-- <div class="cart_anchor"></div> -->
+                <form action="" method="post" >
+
+					<span id="cantidad" class="btn btn-danger" >0</span><span  class="btn btn-danger" id="carrito" >0</span>
+					<input type="submit" id="enviar" value="Ver Carrito">
+
+				</form>
             </div>
         </div>
     </div>
