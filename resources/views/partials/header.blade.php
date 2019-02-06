@@ -8,38 +8,30 @@
 -->
 
 <div class="row" id="banner-top">
-    <div class="col-md-2">
+    <div class="col-2">
     </div>
-    <div class="col-md-8">
-        <!-- <div class="row">
-            <div class="col-md-6">
-                <strong id="banner-top-title" class="align-middle">TIENDA DE COMPONENTES ELECTRÓNICOS</strong>
-            </div>
-            <div class="col-md-6" id="banner-top-text">
-                <span class="align-middle">Nuevos productos | Carrito | Formas de Envio | Metodos de pago</span>
-            </div>
-        </div> -->
+    <div class="col-8">
         <div class="row">
-            <div class="col-sm-6 col-md-6" id="banner-top-title">
+            <div class="d-none d-sm-block col-xl-6 col-md-12 col-sm-12 col-xs-12" id="banner-top-title">
                 <strong>TIENDA DE COMPONENTES ELECTRÓNICOS</strong>
             </div>
-        <div class="d-none d-lg-block col-sm-6" id="banner-top-text">
+        <div class="d-none d-xl-block col-xl-6" id="banner-top-text">
             Nuevos productos | Carrito | Formas de Envio | Metodos de pago
         </div>
 </div>
     </div>
-    <div class="col-md-2">
+    <div class="col-2">
     </div>
 </div>
-<div class="row " id="banner-mid">
-    <div class="col-md-2">
+<div class="row" id="banner-mid">
+    <div class="col-2">
     </div>
-    <div class="col-md-8">
+    <div class="col-8">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-xl-3 col-md-4 col-sm-6 col-xs-12">
                 <a href="{{url('/')}}"><img width="179" src="{{url('img/daw_electronics.png')}}"></a>
             </div>
-            <div class="col-md-4">
+            <div class="d-none d-xl-block col-xl-4">
             <div class="search-container">
                 <form class="buscar" action="/action_page.php">
                     <input type="text" name="" id="busqueda" placeholder="Busca aqui">
@@ -47,7 +39,7 @@
                 </form>
             </div>
             </div>
-            <div class="col-md-3">
+            <div class="d-none d-sm-block col-xl-3 col-md-4 col-sm-6">
                 <button type="button" id="login" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                     INICIAR SESIÓN / REGISTRARSE
                 </button>
@@ -103,19 +95,19 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-2">
+            <div class="d-none d-md-block col-xl-2 col-md-4">
                 <div class="cart_anchor"></div>
             </div>
         </div>
     </div>
-    <div class="col-md-2">
+    <div class="col-2">
     </div>
 </div>
 
 <div class="row align-center" id="banner-bottom">
-        <div class="col-md-2">
+        <div class="col-2">
         </div>
-        <div class="col-md-8">
+        <div class="col-8">
         <div class="mx-auto" style="width: 900px;">
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -192,6 +184,6 @@
             </nav>
             </div>
         </div>
-    <div class="col-md-2">
+    <div class="col-2">
     </div>
 </div>
