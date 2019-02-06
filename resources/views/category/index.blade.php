@@ -9,8 +9,8 @@
         {{$category}}
     @endif
 </h1>
-   
-</div> 
+
+</div>
 @stop
 @section('content1')
 
@@ -39,14 +39,18 @@
 	/*Captura el valor e Id del producto  y lo pasa al carrito*/
 	$(document).ready(function (){
 		var cont = 0;
+        var total = 0;
 		$(this).on("click", "#shop", function(){
 			var price = $(this).parent().parent().find('#product-price').text();
 			var idPrice = $(this).parent().parent().find('#productId').val();
+            precio = parseInt(price);
+            total = total + precio;
+            cont++;
 			$('#cantidad').text(cont);
-			$('#carrito').text(price);
-			
+			$('#carrito').text(total);
+
 			idArr.push(idPrice);
-			
+
 		})
 	});
 

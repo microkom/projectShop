@@ -95,13 +95,13 @@
                 </div>
             </div>
             <div class="d-none d-md-block col-xl-2 col-md-4">
-                <!-- <div class="cart_anchor"></div> -->
-                <form action="" method="post" >
-
-					<span id="cantidad" class="btn btn-danger" >0</span><span  class="btn btn-danger" id="carrito" >0</span>
-					<input type="submit" id="enviar" value="Ver Carrito">
-
-				</form>
+                <div class="cart_anchor" data-toggle="modal" data-target="#modalLogin">
+                    <form action="" method="post" >
+					    <span id="cantidad" class="badge badge-primary" >0</span>
+                        <span id="total" class="badge badge-primary" >0</span>
+					<!-- <input type="submit" id="enviar" value="Ver Carrito"> -->
+				    </form>
+                </div>
             </div>
         </div>
     </div>
