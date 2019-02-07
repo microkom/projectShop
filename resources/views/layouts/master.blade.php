@@ -25,7 +25,7 @@
 	</head>
 	<body>
 
-		<div class="container-fluid">
+		<div class="w100">
 
 			<!----------------        HEADER       ---------------->
 
@@ -34,10 +34,10 @@
 		</div>
 		<!----------------       ULTIMOS PRODUCTOS       ---------------->
 
-		<div class="anchoTarjetas">                
+		<div class="w100">                
 			@yield('content')
 
-			<div class="anchoTarjetas">
+			<div class="w900 mAuto">
 				@yield('content1')
 			</div>
 			<div >
