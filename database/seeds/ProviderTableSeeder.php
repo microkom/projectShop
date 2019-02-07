@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Provider;
 
-class ProvidersTableSeeder extends Seeder {
+class ProviderTableSeeder extends Seeder {
 
     /**
      * Run the database seeds.
@@ -153,17 +152,19 @@ class ProvidersTableSeeder extends Seeder {
         )
     );
 
-    public function run() {
-        DB::table('providers')->truncate();
+  public function run()
+	{
+		DB::table('provider')->truncate();
 
-        foreach ($this->providerArr as $p) {
-            $provider = new Provider();
-            $provider->nif = $p['nif'];
-            $provider->email = $p['email'];
-            $provider->name = $p['name'];
-            $provider->country = $p['country'];
-            $provider->save();
-        }
-    }
+		foreach ($this->providerArr as $providerObject) {
+			$provider = new Provider();
+			$provider->nif = $providerObject['nif'];
+			$provider->email = $providerObject['email'];
+			$provider->name = $providerObject['name'];
+			$product->country = $providerObject['country'];
+			$product->save();
+		}
+
+	}
 
 }
