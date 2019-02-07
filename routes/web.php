@@ -17,4 +17,6 @@ Route::get('category/{category}', 'CategoryController@getCategory');
 
 Route::get('category/{category}/{subCategory}', 'CategoryController@getSubCategory');
 
-Route::get('product/{product}', 'ProductController@getShow');
+Route::get('product/{product}', 'ProductController@getShow'); 
+
+Route::resource('orders','OrdersController');
