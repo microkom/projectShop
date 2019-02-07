@@ -10,7 +10,7 @@
     @endif
 </h1>
 
-</div>
+</div> 
 @stop
 @section('content1')
 
