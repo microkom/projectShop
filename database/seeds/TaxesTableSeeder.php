@@ -14,27 +14,23 @@ class TaxesTableSeeder extends Seeder
     {
         DB::table('taxes')->truncate();
         $tax = new Taxes();
-        $tax->name = '15';
+        $tax->value = '0';
+        $tax->name = 'Cero';
         $tax->save();
 
         $tax = new Taxes();
-        $tax->name = 'fotografia';
+        $tax->value = '4';
+        $tax->name = 'Reducido';
         $tax->save();
 
         $tax = new Taxes();
-        $tax->name = 'telefonia';
+        $tax->value = '10';
+        $tax->name = 'Bajo';
         $tax->save();
  
         $tax = new Taxes();
-        $tax->name = 'ocio';
-        $tax->save();
-
-        $tax = new Taxes();
-        $tax->name = 'television';
-        $tax->save();
-
-        $tax = new Taxes();
-        $tax->name = 'accesorios';
+        $tax->value = '21';
+        $tax->name = 'Normal';
         $tax->save();
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTaxesTable extends Migration
+class CreateProviderTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateTaxesTable extends Migration
      */
     public function up()
     {
-        Schema::create('taxes', function (Blueprint $table) {
+        Schema::create('provider', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('value');
-            $table->string('name');
+            $table->string('nif',9);
+            $table->string('email',80);
+            $table->string('name',100);
+            $table->string('country',100)->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ class CreateTaxesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('taxes');
+        Schema::dropIfExists('provider');
     }
 }
