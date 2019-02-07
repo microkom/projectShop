@@ -4,20 +4,19 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProzsTable extends Migration
-{
+class CreateProviderOrdersTable extends Migration {
+
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
-    {
-        Schema::create('prozs', function (Blueprint $table) {
+    public function up() {
+        Schema::create('provider_orders', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('providerid');
             $table->string('date');
-            $table->float('total')->nullable();            
+            $table->float('total')->nullable();
             $table->timestamps();
         });
     }
@@ -27,8 +26,8 @@ class CreateProzsTable extends Migration
      *
      * @return void
      */
-    public function down()
-    {
-        Schema::dropIfExists('prozs');
+    public function down() {
+        Schema::dropIfExists('provider_orders');
     }
+
 }

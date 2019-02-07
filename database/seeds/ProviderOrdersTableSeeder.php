@@ -1,15 +1,16 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Proz;
-class ProzsTableSeeder extends Seeder
+use App\ProviderOrder;
+
+class ProviderOrdersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      *
      * @return void
      */
-     private $rr = array(
+private $providerOrdersArr = array(
         array(
             "id" => 1,
             "providerid" => 1,
@@ -512,39 +513,17 @@ class ProzsTableSeeder extends Seeder
         )
     );
 
-    public function run()
-	{
-		DB::table('prozs')->truncate();
+   
 
-        foreach ($this->rr as $provOrd) {
-            $pro = new Proz();
+    public function run() {
+        DB::table('provider_orders')->truncate();
+
+        foreach ($this->providerOrdersArr as $provOrd) {
+            $pro = new ProviderOrder();
             $pro->providerid = $provOrd['providerid'];
             $pro->date = $provOrd['date'];
             $pro->save();
         }
     }
 
-//    public function run()
-//	{
-//		DB::table('products')->truncate();
-//
-//		foreach ($this->arrayProductos as $producto) {
-//			$product = new Product();
-//			$product->object = $producto['object'];
-//			$product->model = $producto['model'];
-//			$product->name = $producto['name'];
-//			$product->brand = $producto['brand'];
-//			$product->description = $producto['description'];
-//			$product->specifications = $producto['specifications'];
-//			$product->price = $producto['price'];
-//			$product->categoryid = $producto['categoryid'];
-//			$product->subcategoryid = $producto['subcategoryid'];
-//			$product->providerid = $producto['providerid'];
-//			$product->imgRoute = $producto['imgRoute'];
-//			$product->stock = $producto['stock'];
-//			$product->taxesid = $producto['taxesid'];
-//			$product->save();
-//		}
-//
-//	}
-}       
+}
