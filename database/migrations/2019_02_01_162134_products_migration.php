@@ -22,9 +22,9 @@ class ProductsMigration extends Migration
             $table->text('description')->nullable();
             $table->text('specifications')->nullable();
             $table->float('price')->nullable();
-            $table->integer('categoryid');
-            $table->integer('subcategoryid');
-            $table->integer('providerid');
+            $table->unsignedInteger('categoryid');
+            $table->unsignedInteger('subcategoryid');
+            $table->unsignedInteger('providerid');
             $table->string('imgRoute')->nullable();
             $table->integer('stock')->nullable();
             $table->integer('taxesid');

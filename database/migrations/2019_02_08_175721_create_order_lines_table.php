@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class SubcategoriesMigration extends Migration
+class CreateOrderLinesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,17 @@ class SubcategoriesMigration extends Migration
      */
     public function up()
     {
-        Schema::create('Subcategories', function (Blueprint $table) {
+        Schema::create('order_lines', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('description')->nullable();
-            $table->unsignedInteger('categoryid');
+            $table->unsignedInteger('productid');
+            $table->float('price')->nullable();
+            $table->integer('quantity')->nullable();
+            $table->float('discount')->nullable();
+            $table->float('taxApplied')->nullable();
             $table->timestamps();
         });
     }
-
+    
     /**
      * Reverse the migrations.
      *
@@ -29,6 +31,6 @@ class SubcategoriesMigration extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Subcategories');
+        Schema::dropIfExists('-orders');
     }
 }
