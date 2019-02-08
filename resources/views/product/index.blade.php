@@ -1,3 +1,6 @@
+@php
+session_start();
+@endphp
 @extends('layouts.detail')
 
 
@@ -8,7 +11,7 @@
 
     </div>
     <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center border border-danger">
-        <img src="{{url('img/'. $product['imgRoute'])}}" style="width: 390px; heigth: 200px" alt="prueba">
+        <img src="{{url('img/'. $product->imgRoute)}}" style="width: 390px; heigth: 200px" alt="prueba">
         <div class="row price">
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4 border border-danger">
                 {{$product->price}} € 
@@ -17,9 +20,9 @@
                 <!--<a class="heart"></a>-->
             </div>
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4 border border-danger"> 
-                <button class="btn btn-warning">
-                    <span onclick="document.getElementById('id01').style.display='block'" class="glyphicon glyphicon-shopping-cart"></span>Carrito
-                </button>
+                <a type="submit" class="btn btn-warning" href="/carrito/{{$product->id}}" >
+                    Carrito
+                </a>
             </div>
         </div>
     </div>
@@ -31,12 +34,16 @@
         @endphp 
         <br>
         <h4>Descripción: </h4>
-        {{$product->description}}
+        @php
+        echo nl2br(htmlentities($product->description,ENT_QUOTES,'UTF-8'))
+        @endphp
 
 
 
     </div>
 
 </div>
-
+@php
+var_dump($_SESSION);
+@endphp
 @stop

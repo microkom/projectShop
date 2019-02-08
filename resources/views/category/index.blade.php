@@ -24,7 +24,7 @@
             <p class="card-text" id="product-price">{{$producto->price}}€</p>
         </div>
         <div class="card-footer">
-         <button type="button" class="btn btn-primary" id="shop">Comprar</button>
+         <a class="btn btn-primary" id="shop" href="/carrito/{{$producto->id}}">Comprar</a>
                 <small class="text-muted">Stock {{$producto->stock}}</small>
             </a>
         </div>

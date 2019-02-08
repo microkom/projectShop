@@ -99,7 +99,7 @@
                 <form action="" method="post" >
 
 					<span id="cantidad" class="btn btn-danger" >0</span><span  class="btn btn-danger" id="carrito" >0</span>
-					<input type="submit" id="enviar" value="Ver Carrito">
+					<a id="enviar" class="btn btn-info" href="/carrito">Ver carrito</a>
 
 				</form>
             </div>
