@@ -6,12 +6,10 @@ use App\Product;
 
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class ProductsController extends Controller
 {
-    public function getShow($id){
-
+    public function getProduct($id){
         $producto = Product::where('id', $id)->first();
         return view('product.index',  array('product' => $producto));
     }
-
 }

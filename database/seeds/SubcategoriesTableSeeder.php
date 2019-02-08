@@ -1,11 +1,8 @@
 <?php
-
 use App\Subcategory;
 use Illuminate\Database\Seeder;
-
 class SubcategoriesTableSeeder extends Seeder
 {
-
     private $arraySubcategorias = array(
         array(
             'name' => 'Portatiles',            
@@ -96,7 +93,6 @@ class SubcategoriesTableSeeder extends Seeder
     public function run()
     {
         DB::table('subcategories')->truncate();
-
         foreach ($this->arraySubcategorias as $subcategoria) {
             $subcategory = new Subcategory();
             $subcategory->name = $subcategoria['name'];
@@ -105,4 +101,3 @@ class SubcategoriesTableSeeder extends Seeder
         }
     }
 }
-

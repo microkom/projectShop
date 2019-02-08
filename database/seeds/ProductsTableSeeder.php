@@ -5,7 +5,6 @@ use Illuminate\Database\Seeder;
 
 class ProductsTableSeeder extends Seeder
 {
-
 	private $arrayProductos = array(
 		array (
 			"id"=>1,
@@ -551,9 +550,7 @@ class ProductsTableSeeder extends Seeder
 			"stock"=>20,
 			"taxesid"=>2
 		)
-
 	);
-
 	/**
      * Run the database seeds.
      *
@@ -562,7 +559,6 @@ class ProductsTableSeeder extends Seeder
 	public function run()
 	{
 		DB::table('products')->truncate();
-
 		foreach ($this->arrayProductos as $producto) {
 			$product = new Product();
 			$product->object = $producto['object'];
@@ -580,6 +576,5 @@ class ProductsTableSeeder extends Seeder
 			$product->taxesid = $producto['taxesid'];
 			$product->save();
 		}
-
 	}
 }

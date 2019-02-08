@@ -5,18 +5,16 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Product;
 use App\Subcategory;
+use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class CategoriesController extends Controller
 {
     public function getCategory($category)
     {
         $categoryId = Category::where('name', $category)->first()->id;
-
         $arrayProductos = Product::where('categoryid', $categoryId)->get();
-
         return view('category.index', array('arrayProductos' => $arrayProductos, 'category' => $category));
     }
-
     public function getSubCategory($category, $subCategory)
     {
         $categoryId = Category::where('name', $category)->first()->id;

@@ -9,12 +9,16 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
- */
+*/
 
-Route::get('/', 'HomeController@getHome');
+Route::get('category/{category}', 'CategoriesController@getCategory');
 
-Route::get('category/{category}', 'CategoryController@getCategory');
+Route::get('category/{category}/{subCategory}', 'CategoriesController@getSubCategory');
 
-Route::get('category/{category}/{subCategory}', 'CategoryController@getSubCategory');
+Route::get('product/{product}', 'ProductsController@getProduct');
 
-Route::get('product/{product}', 'ProductController@getShow');
+Auth::routes();
+
+Route::get('/', 'HomeController@index');
+
+Route::get('/home', 'HomeController@index')->name('home');

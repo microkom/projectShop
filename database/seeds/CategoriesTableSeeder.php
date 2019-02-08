@@ -16,28 +16,20 @@ class CategoriesTableSeeder extends Seeder
         $category = new Category();
         $category->name = 'Informatica';
         $category->save();
-
         $category = new Category();
         $category->name = 'Fotografía';
         $category->save();
-
         $category = new Category();
         $category->name = 'Telefonía';
         $category->save();
-
         $category = new Category();
         $category->name = 'Ocio';
         $category->save();
-
         $category = new Category();
         $category->name = 'Televisión';
         $category->save();
-
         $category = new Category();
         $category->name = 'Accesorios';
         $category->save();
-
-        /*$this->call(CategoryTableSeeder::class);*/
-
     }
 }

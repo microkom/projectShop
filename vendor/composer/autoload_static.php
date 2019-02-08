@@ -4,14 +4,14 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitdeec48245520f8664482dd1f7ad8adad
+class ComposerStaticInit3fd20a29f9f64bf1a82f066eada9509b
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
-        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
+        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
@@ -428,9 +428,10 @@ class ComposerStaticInitdeec48245520f8664482dd1f7ad8adad
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
-        'App\\Http\\Controllers\\CategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/CategoryController.php',
+        'App\\Http\\Controllers\\CategoriesController' => __DIR__ . '/../..' . '/app/Http/Controllers/CategoriesController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\ProductsController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProductsController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -445,6 +446,7 @@ class ComposerStaticInitdeec48245520f8664482dd1f7ad8adad
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Subcategory' => __DIR__ . '/../..' . '/app/Subcategory.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'BeyondCode\\DumpServer\\DumpServerCommand' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src/DumpServerCommand.php',
         'BeyondCode\\DumpServer\\DumpServerServiceProvider' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src/DumpServerServiceProvider.php',
@@ -504,6 +506,7 @@ class ComposerStaticInitdeec48245520f8664482dd1f7ad8adad
         'Dotenv\\Exception\\InvalidPathException' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Exception/InvalidPathException.php',
         'Dotenv\\Exception\\ValidationException' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Exception/ValidationException.php',
         'Dotenv\\Loader' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Loader.php',
+        'Dotenv\\Parser' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Parser.php',
         'Dotenv\\Validator' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Validator.php',
         'Egulias\\EmailValidator\\EmailLexer' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/EmailLexer.php',
         'Egulias\\EmailValidator\\EmailParser' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/EmailParser.php',
@@ -1418,6 +1421,7 @@ class ComposerStaticInitdeec48245520f8664482dd1f7ad8adad
         'Illuminate\\Database\\Eloquent\\Concerns\\QueriesRelationships' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/QueriesRelationships.php',
         'Illuminate\\Database\\Eloquent\\Factory' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Eloquent/Factory.php',
         'Illuminate\\Database\\Eloquent\\FactoryBuilder' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Eloquent/FactoryBuilder.php',
+        'Illuminate\\Database\\Eloquent\\HigherOrderBuilderProxy' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Eloquent/HigherOrderBuilderProxy.php',
         'Illuminate\\Database\\Eloquent\\JsonEncodingException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Eloquent/JsonEncodingException.php',
         'Illuminate\\Database\\Eloquent\\MassAssignmentException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Eloquent/MassAssignmentException.php',
         'Illuminate\\Database\\Eloquent\\Model' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Eloquent/Model.php',
@@ -2064,7 +2068,11 @@ class ComposerStaticInitdeec48245520f8664482dd1f7ad8adad
         'Mockery\\Adapter\\Phpunit\\Legacy\\TestListenerForV7' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/Legacy/TestListenerForV7.php',
         'Mockery\\Adapter\\Phpunit\\Legacy\\TestListenerTrait' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/Legacy/TestListenerTrait.php',
         'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegration' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegration.php',
+        'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegrationAssertPostConditionsForV7AndPrevious' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegrationAssertPostConditionsForV7AndPrevious.php',
+        'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegrationAssertPostConditionsForV8' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegrationAssertPostConditionsForV8.php',
         'Mockery\\Adapter\\Phpunit\\MockeryTestCase' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryTestCase.php',
+        'Mockery\\Adapter\\Phpunit\\MockeryTestCaseSetUpForV7AndPrevious' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryTestCaseSetUpForV7AndPrevious.php',
+        'Mockery\\Adapter\\Phpunit\\MockeryTestCaseSetUpForV8' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryTestCaseSetUpForV8.php',
         'Mockery\\Adapter\\Phpunit\\TestListener' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/TestListener.php',
         'Mockery\\ClosureWrapper' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/ClosureWrapper.php',
         'Mockery\\CompositeExpectation' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/CompositeExpectation.php',
@@ -2331,6 +2339,10 @@ class ComposerStaticInitdeec48245520f8664482dd1f7ad8adad
         'Nexmo\\Message\\Query' => __DIR__ . '/..' . '/nexmo/client/src/Message/Query.php',
         'Nexmo\\Message\\Response\\Collection' => __DIR__ . '/..' . '/nexmo/client/src/Message/Response/Collection.php',
         'Nexmo\\Message\\Response\\Message' => __DIR__ . '/..' . '/nexmo/client/src/Message/Response/Message.php',
+        'Nexmo\\Message\\Shortcode' => __DIR__ . '/..' . '/nexmo/client/src/Message/Shortcode.php',
+        'Nexmo\\Message\\Shortcode\\Alert' => __DIR__ . '/..' . '/nexmo/client/src/Message/Shortcode/Alert.php',
+        'Nexmo\\Message\\Shortcode\\Marketing' => __DIR__ . '/..' . '/nexmo/client/src/Message/Shortcode/Marketing.php',
+        'Nexmo\\Message\\Shortcode\\TwoFactor' => __DIR__ . '/..' . '/nexmo/client/src/Message/Shortcode/TwoFactor.php',
         'Nexmo\\Message\\Text' => __DIR__ . '/..' . '/nexmo/client/src/Message/Text.php',
         'Nexmo\\Message\\Unicode' => __DIR__ . '/..' . '/nexmo/client/src/Message/Unicode.php',
         'Nexmo\\Message\\Vcal' => __DIR__ . '/..' . '/nexmo/client/src/Message/Vcal.php',
@@ -4174,11 +4186,11 @@ class ComposerStaticInitdeec48245520f8664482dd1f7ad8adad
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitdeec48245520f8664482dd1f7ad8adad::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitdeec48245520f8664482dd1f7ad8adad::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInitdeec48245520f8664482dd1f7ad8adad::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitdeec48245520f8664482dd1f7ad8adad::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitdeec48245520f8664482dd1f7ad8adad::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit3fd20a29f9f64bf1a82f066eada9509b::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit3fd20a29f9f64bf1a82f066eada9509b::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit3fd20a29f9f64bf1a82f066eada9509b::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit3fd20a29f9f64bf1a82f066eada9509b::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit3fd20a29f9f64bf1a82f066eada9509b::$classMap;
 
         }, null, ClassLoader::class);
     }

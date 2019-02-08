@@ -40,9 +40,28 @@
             </div>
             </div>
             <div class="d-none d-sm-block col-xl-3 col-md-4 col-sm-6">
+
+            @if (Auth::check())
+            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+            @else
                 <button type="button" id="login" class="btn btn-primary" data-toggle="modal" data-target="#modalLogin">
                     INICIAR SESIÓN / REGISTRARSE
                 </button>
+            @endif
                 <!-- The Modal -->
                 <div class="modal fade" id="modalLogin">
                     <div class="modal-dialog">
@@ -55,38 +74,137 @@
 
                             <nav>
                                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home"
-                                        role="tab" aria-controls="nav-home" aria-selected="true">Login</a>
-                                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
-                                        role="tab" aria-controls="nav-profile" aria-selected="false">Registro</a>
+                                    <a class="nav-item nav-link active" id="nav-login-tab" data-toggle="tab" href="#nav-login"
+                                        role="tab" aria-controls="nav-login" aria-selected="true">Login</a>
+                                    <a class="nav-item nav-link" id="nav-register-tab" data-toggle="tab" href="#nav-register"
+                                        role="tab" aria-controls="nav-register" aria-selected="false">Registro</a>
                                 </div>
                             </nav>
 
                             <!-- Modal body -->
                             <div class="modal-body">
                                 <div class="tab-content" id="nav-tabContent">
-                                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
-                                        aria-labelledby="nav-home-tab">
-                                        <form action="#" method="post">
-                                            <label for="username">Usuario</label><br />
-                                            <input type="text" name="username" id="usernameLogin"><br />
-                                            <label for="password">Contraseña</label><br />
-                                            <input type="password" name="password" id="passwordLogin"><br /><br />
-                                            <input type="submit" class="btn btn-success" value="Iniciar sesión">
-                                        </form>
+                                    <div class="tab-pane fade show active" id="nav-login" role="tabpanel" aria-labelledby="nav-login-tab">
+                                    <form method="POST" action="{{route('login')}}" id="formLogin">
+                        @csrf
+
+                        <div class="form-group row">
+                            <label for="mailLogin" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="mailLogin" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="mailLogin" value="{{ old('email') }}" required autofocus>
+
+                                @if ($errors->has('email'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="passwordLogin" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="passwordLogin" required>
+
+                                @if ($errors->has('password'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-6 offset-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                                    <label class="form-check-label" for="remember">
+                                        {{ __('Remember Me') }}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Login') }}
+                                </button>
+
+                                @if (Route::has('password.request'))
+                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                        {{ __('Forgot Your Password?') }}
+                                    </a>
+                                @endif
+                            </div>
+                        </div>
+                    </form>
                                     </div>
-                                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                                        <form action="#" method="post">
-                                            <label for="username">Usuario</label><br />
-                                            <input type="text" name="username" id="usernameSignup"><br />
-                                            <label for="email">Correo electrónico</label><br />
-                                            <input type="email" name="email" id="email"><br />
-                                            <label for="password">Contraseña</label><br />
-                                            <input type="password" name="password" id="passwordSignup"><br />
-                                            <label for="password">Repetir contraseña</label><br />
-                                            <input type="password" name="password2" id="password2"><br /><br />
-                                            <input type="submit" class="btn btn-success" value="Registrarse">
-                                        </form>
+                                    <div class="tab-pane fade" id="nav-register" role="tabpanel" aria-labelledby="nav-register-tab">
+                                    <form method="POST" action="{{ route('register') }}" id="formRegister">
+                        @csrf
+
+                        <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+
+                                @if ($errors->has('name'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="mailRegister" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="mailRegister" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="mailRegister" value="{{ old('email') }}" required>
+
+                                @if ($errors->has('email'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="passwordRegister" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="passwordResgister" required>
+
+                                @if ($errors->has('password'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="passwordRegister-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="passwordRegister-confirm" type="password" class="form-control" name="passwordRegister_confirmation" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Register') }}
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                                     </div>
                                 </div>
                             </div>
