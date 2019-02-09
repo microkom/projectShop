@@ -1,6 +1,5 @@
 @extends('layouts.detail')
 
-
 @section('content')
 
 <form action="#" method="post">
@@ -18,26 +17,28 @@
         </thead>
         <tbody>
         @php
-            $id = array();
-            $i=0;
         @endphp
         @foreach($productos as $producto)
-        @php
-            $id[$i] = $producto->id;
-        @endphp
             <tr>
                 <td>{{$producto->brand}} {{$producto->model}} </td>
                 @php
-        $precio = 'price'.$producto->id;
-                @endphp
-                <td><input type="number" name="uds{{$producto->id}}" id="uds{{$producto->id}}" min="1" max="{{$producto->stock}}" value="1"></td>
+        $id = $producto->id;
+        $price = $producto->price;
+        @endphp
+                @if(isset($_SESSION['listaCarrito']))
+                @foreach($_SESSION['listaCarrito'] as $key => $valor)
+                @php    
+                        $cant = $valor['cant'];
+                        @endphp
+                @endforeach
+                @endif
+                
+                <td><input type="number" name="uds{{$producto->id}}" id="uds{{$producto->id}}" min="1" max="{{$producto->stock}}" value="<?php if(!isset($cant)){ $cant = 1; echo $cant;} else { echo $cant; } ?>" oninput="ajax(<?=$id?>,this.value,<?=$price?>)">
+                <input type="hidden" id="priceStatic{{$producto->id}}" id="priceStatic{{$producto->id}}" value="{{$producto->price}}"></td>
                 <td><p id="price{{$producto->id}}" name="price{{$producto->id}}">{{$producto->price}} </p></td>
                <td class="text-center"><a class="btn btn-danger" href="/carrito/borrar/{{$producto->id}}">Borrar</a></td>
             </tr>
         </tbody>
-        @php
-$i++;
-        @endphp
         @endforeach
         <tfoot>
             <tr>
@@ -51,19 +52,36 @@ $i++;
     </table>
 
 </form>
+@php
+if(isset($_SESSION['listaCarrito']))
+var_dump($_SESSION['listaCarrito']);
+@endphp
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 
-        $(document).on("click",'input',function(){
-
-        var valor = $(this).parent().parent().find("td:eq(1)").find('input').val();
-        var id = $(this).parent().parent().find("td:eq(2)").find('p').getAttribute('id');
-        var price = parseFloat($(this).parent().parent().find("td:eq(2)").find('p').text());
-        console.log(id);
-        
-        });
-        
+function ajax(id,cant,price){
+    // Create our XMLHttpRequest object
+    var hr = new XMLHttpRequest();
+    // Create some variables we need to send to our PHP file
+    var url = "my_parse_file.php";
+    var pId = 'price'+id;
+    var vars = "id="+id+"&price="+price+"&cant="+cant;
+                hr.open("POST", url, true);
+                // Set content type header information for sending url encoded variables in the request
+                hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                // Access the onreadystatechange event for the XMLHttpRequest object
+                hr.onreadystatechange = function() {
+                    if(hr.readyState == 4 && hr.status == 200) {
+                        var return_data = hr.responseText;
+                    
+                        document.getElementById(pId).innerHTML = return_data;
+                    }
+                }
+                // Send the data to PHP now... and wait for response to update the status div
+                hr.send(vars); // Actually execute the request
     
+
+}
 
 </script>
 @stop

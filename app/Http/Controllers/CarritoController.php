@@ -46,4 +46,5 @@ class CarritoController extends Controller
         exit();
         return redirect('/carrito');
     }
+
 }
