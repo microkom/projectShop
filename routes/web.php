@@ -17,6 +17,12 @@ Route::get('category/{category}', 'CategoryController@getCategory');
 
 Route::get('category/{category}/{subCategory}', 'CategoryController@getSubCategory');
 
+Route::get('product/{product}', 'ProductController@getShow');
+
+Route::get('carrito/borrar/{id}', 'CarritoController@delCarrito');
+Route::get('carrito/{id}', 'CarritoController@addCarrito');
+Route::get('carrito', 'CarritoController@getCarrito');
+
 Route::any('/search',function(){
     $q = Input::get ( 'q' );
     $product = Products::where('name','LIKE','%'.$q.'%')->orWhere('description','LIKE','%'.$q.'%')->get();

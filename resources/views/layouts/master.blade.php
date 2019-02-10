@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 		<title>DAW Electronics</title>
 
 		<meta name="description" content="Página principal del Proyecto DAW Electronics">
@@ -22,6 +22,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+        <script src="/js/addSession.js"></script>
 	</head>
 	<body>
 
@@ -37,7 +38,7 @@
 		<div class="w100">                
 			@yield('content')
 
-			<div class="w900 mAuto">
+			<div class="w900 mx-auto">
 				@yield('content1')
 			</div>
 			<div >
@@ -56,9 +57,10 @@
 
 		<!----------------       Scripts       ---------------->
 
-		<script src="js/jquery.min.js"></script>
+		<script src="/js/app.js"></script>
+		<!--<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="js/scripts.js"></script>
+		<script src="js/scripts.js"></script>-->
 	</body>
 
 </html>
