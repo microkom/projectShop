@@ -26,6 +26,18 @@ Route::post('user/admin/nuevoproducto', 'UsersController@addProduct');
 Route::get('user/admin/editarproducto/{id}', 'UsersController@editarProducto');
 Route::put('user/admin/editarproducto/{id}', 'UsersController@editProduct');
 
+
+Route::get('carrito/borrar/{id}', 'CarritoController@delCarrito');
+
+Route::post('session', 'AddToCartController@addToSession');
+
+Route::get('xs', 'AddToCartController@viewSession');
+
+Route::get('carrito/{id}', 'CarritoController@addCarrito');
+Route::get('carrito', 'CarritoController@getCarrito');
+
+
+
 Auth::routes();
 
 Route::get('/', 'HomeController@index');

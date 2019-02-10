@@ -5,6 +5,7 @@ use Illuminate\Database\Seeder;
 
 class ProductsTableSeeder extends Seeder
 {
+    
 	private $arrayProductos = array(
 		array (
 			"id"=>1,
@@ -558,6 +559,7 @@ class ProductsTableSeeder extends Seeder
      */
 	public function run()
 	{
+        Schema::disableForeignKeyConstraints();
 		DB::table('products')->truncate();
 		foreach ($this->arrayProductos as $producto) {
 			$product = new Product();
@@ -576,5 +578,6 @@ class ProductsTableSeeder extends Seeder
 			$product->taxesid = $producto['taxesid'];
 			$product->save();
 		}
+        Schema::enableForeignKeyConstraints();
 	}
 }

@@ -1,24 +1,26 @@
 <?php
+
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-class CreateSubcategoriesTable extends Migration
+
+class CreateTaxesTable extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
+   public function up()
     {
-        Schema::create('Subcategories', function (Blueprint $table) {
+        Schema::create('taxes', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('value');
             $table->string('name');
-            $table->string('description')->nullable();
-            $table->unsignedInteger('categoryid');
             $table->timestamps();
         });
     }
+
     /**
      * Reverse the migrations.
      *
@@ -26,6 +28,6 @@ class CreateSubcategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Subcategories');
+        Schema::dropIfExists('-taxes');
     }
 }

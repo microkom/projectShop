@@ -114,11 +114,13 @@ td {
     background-color: lightgray;
 }
 
-.anchoTarjetas {
-    width: 900px;
-    margin: auto;
+.card {
+    float: left;
+    max-width: 225px;
+    min-width: 200px;
+    padding: 10px;
+    height: 400px;
 }
-
 .card a {
     color: black;
 }
@@ -132,16 +134,6 @@ td {
     width: 220px;
     padding: 10px;
     height: 400px;
-}
-
-.cardGen {
-    display: inline-block;
-}
-
-.cardGen:after {
-    content: "";
-    display: table;
-    clear: both;
 }
 
 .card>img {
@@ -175,3 +167,27 @@ td {
     font-size: 40px;
     font-weight: bold;
 }
+.font-orbitron{
+    font-family: 'Orbitron', sans-serif;
+}
+.font-ptsans{
+    font-family: 'PT Sans', sans-serif;
+}
+.font-felipa{
+    font-family: 'Felipa', cursive;
+}
+.font-satisfy{
+   font-family: 'Satisfy', cursive; 
+}
+.font-ruda{
+    font-family: 'Ruda', sans-serif;
+}
+.font-economica{
+    font-family: 'Economica', sans-serif;
+}
+.font-b612{
+    font-family: 'B612 Mono', monospace;
+}
+
+.w900{max-width: 900px;}
+.w100{width: 100%;}
