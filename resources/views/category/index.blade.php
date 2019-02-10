@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="tituloCategoria">
+<div class="tituloCategoria  font-b612">
     <h1>
         @if (isset($subCategory))
         {{$subCategory}}
@@ -27,7 +27,7 @@
                 <h5 class="card-title">{{$producto->brand}} {{$producto->model}}</h5></a>
         </div>
         <div class="align-text-bottom ">   
-            <p class="card-text text-center" id="product-price">{{$producto->price}}€</p>
+            <p class="card-text text-center font-orbitron" id="product-price">{{$producto->price}}€</p>
         </div>
         <div class="card-footer">
             <a class="btn btn-primary" id="shop" >Comprar</a>

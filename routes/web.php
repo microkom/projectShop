@@ -20,6 +20,9 @@ Route::get('category/{category}/{subCategory}', 'CategoryController@getSubCatego
 Route::get('product/{product}', 'ProductController@getShow');
 
 Route::get('carrito/borrar/{id}', 'CarritoController@delCarrito');
+
+Route::post('session', 'AddToCartController@addToSession');
+
 Route::get('carrito/{id}', 'CarritoController@addCarrito');
 Route::get('carrito', 'CarritoController@getCarrito');
 

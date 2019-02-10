@@ -121,6 +121,29 @@
 .text-muted {
     font-size: 15px;
 }
+.font-orbitron{
+    font-family: 'Orbitron', sans-serif;
+}
+.font-ptsans{
+    font-family: 'PT Sans', sans-serif;
+}
+.font-felipa{
+    font-family: 'Felipa', cursive;
+}
+.font-satisfy{
+   font-family: 'Satisfy', cursive; 
+}
+.font-ruda{
+    font-family: 'Ruda', sans-serif;
+}
+.font-economica{
+    font-family: 'Economica', sans-serif;
+}
+.font-b612{
+    font-family: 'B612 Mono', monospace;
+}
+
+
 
 .w900{max-width: 900px;}
 .w100{width: 100%;}

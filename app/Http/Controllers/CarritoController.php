@@ -29,7 +29,7 @@ class CarritoController extends Controller
             array_push($_SESSION['carrito'], $producto);
             return redirect('product/'. $id);
         }
-        
+
     }
     public function delCarrito($id){
         foreach($_SESSION['carrito'] as $key => $valor){
@@ -41,4 +41,6 @@ class CarritoController extends Controller
         exit();
         return redirect('/carrito');
     }
+
+
 }
