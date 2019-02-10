@@ -29,29 +29,13 @@
 
             <!----------------        HEADER       ---------------->
 
-            @include('partials.header')
+            @include('partials.admin_header')
 
         </div>
-            <!----------------       ULTIMOS PRODUCTOS       ---------------->
+            <!----------------       FORMULARIOS       ---------------->
 
-        <div class="anchoTarjetas">                
-                @yield('content')
-                            
-                <div class="anchoTarjetas">
-            @yield('content1')
-            </div>
-            <div >
-            
-                @yield('productos')
-            
-            </div>
-            <div class="row">
-                <div class="col-md-2">                </div>
-                <div class="col-md-8">                </div>
-                <div class="col-md-2">                </div>
-            </div>
-        </div>
-           
+            @yield('listar')
+            @yield('formulario')
 
         <!----------------       Scripts       ---------------->
 

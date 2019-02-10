@@ -17,6 +17,15 @@ Route::get('category/{category}/{subCategory}', 'CategoriesController@getSubCate
 
 Route::get('product/{product}', 'ProductsController@getProduct');
 
+Route::get('user/admin', 'UsersController@showAdminPanel');
+
+Route::get('user/admin/listar', 'UsersController@listar');
+
+Route::get('user/admin/nuevoproducto', 'UsersController@nuevoProducto');
+Route::post('user/admin/nuevoproducto', 'UsersController@addProduct');
+Route::get('user/admin/editarproducto/{id}', 'UsersController@editarProducto');
+Route::put('user/admin/editarproducto/{id}', 'UsersController@editProduct');
+
 Auth::routes();
 
 Route::get('/', 'HomeController@index');

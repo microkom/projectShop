@@ -1,3 +1,24 @@
+.row-centered {
+    text-align: center;
+}
+
+.col-centered {
+    display: inline-block;
+    float: none;
+    /* reset the text-align */
+    text-align: left;
+    /* inline-block space fix */
+    margin-right: -4px;
+    text-align: center;
+}
+
+#listaProductos,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
 #banner-top {
     background-color: #404659;
     height: 30px;
@@ -63,6 +84,10 @@
     background-color: #404659;
 }
 
+.navbar-logout {
+    background-color: #496487;
+}
+
 .navbar li {
     margin-right: 40px;
     height: 37px;
@@ -102,7 +127,7 @@
     text-decoration: none;
 }
 
-.card {
+.card-productos {
     float: left;
     width: 220px;
     padding: 10px;
@@ -119,7 +144,7 @@
     clear: both;
 }
 
-.card > img {
+.card>img {
     width: 80px;
     height: 80px;
 }
