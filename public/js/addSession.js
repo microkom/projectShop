@@ -2,38 +2,129 @@
 
 $(document).ready(function () {
 
-    var idArr = [];
     $(this).on("click", "#shop", function () {
-
-        var price = $(this).parent().parent().find('#product-price').text();
-        var productId = $(this).parent().parent().find('#productId').val();
-        /*$('#cantidad').text(cont);
-         $('#carrito').text(price);*/
-        var jsonProducts = {"id": productId, "cant": 1, "price": price};
-        idArr.push(jsonProducts);
-        var jsonArr = {"ob": idArr};
-//        addSession(jsonArr);
-//        
-//function addSession(productList) {
-        // Create our XMLHttpRequest object
-        var hr = new XMLHttpRequest();
-        var csrf_token = $('meta[name="csrf-token"]').attr('content');
-
-        // Create some variables we need to send to our PHP file
-        var url = "/session";
-        varj = JSON.stringify(jsonArr);
-        hr.open("POST", url, true);
-        // Set content type header information for sending url encoded variables in the request
-        hr.setRequestHeader('X-CSRF-Token', csrf_token, "Content-type", "application/x-www-form-urlencoded");
-        // Access the onreadystatechange event for the XMLHttpRequest object
-        hr.onreadystatechange = function () {
-            if (hr.readyState === 4 && hr.status === 200) {
-                var return_data = hr.responseText;
-                document.getElementById("status").innerHTML = return_data;
+        var productId = $(this).parent().parent().find('.productId').html();
+        $.ajax({
+            url: "/carrito/" + productId,
+            type: "get",
+            success: function (data) {
+                if (data === 1) {
+                    alert('Error agregando al carrito.');
+                } else {
+                    //alert('Producto añadido');
+                }
+            }, error: function () {
+                alert("Error agregando al carrito!!!!");
             }
-        };
-        // Send the data to PHP now... and wait for response to update the status div
-        hr.send(varj); // Actually execute the request
+        });
+    }
+    );
+
+
+    $('.mas').click(function () {
+        var productId = $(this).parent().attr('id').split('uds')[1];
+        var price = $(this).parent().find('.priceDB').text();
+        $.ajax({
+            url: "/carrito/" + productId,
+            type: "get",
+            //headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+            //data: { id : productId },
+            success: function (data) {
+                if (data == 1) {
+                    alert('Error agregando al carrito.');
+                } else {
+                    var valor = $('#uds' + productId).find('.valor');
+                    var val = parseInt(valor.html()) + 1;
+                    valor.html(val);
+                    //calcular el precio calculado del producto
+                    var sellPrice = showProductSellPrice(val, price);
+                    $('#price' + productId).text(sellPrice);
+                }
+            }, error: function () {
+                alert("Error ajax agregando al carrito!!!!");
+            }
+        });
+
     });
-//}
+    $('.menos').click(function () {
+        var productId = $(this).parent().attr('id').split('uds')[1];
+        var price = $(this).parent().find('.priceDB').text();
+
+        $.ajax({
+            url: "/carrito/" + productId + "/menos",
+            type: "get",
+            success: function (data) {
+                if (data === 1) {
+                    alert('Error agregando al carrito.');
+                } else {
+                    var valor = $('#uds' + productId).find('.valor');
+                    var val = parseInt(valor.html());
+                    if (val > 1) {
+                        val = val - 1;
+                        valor.html(val);
+
+                        //calcular el precio calculado del producto
+                        var sellPrice = showProductSellPrice(val, price);
+                        $('#price' + productId).text(sellPrice);
+
+                    } else if (val === 1) {
+                        $.ajax({
+                            url: "/carrito/borrar/" + productId,
+                            type: "get",
+                            success: function (dataDel) {
+                                if (dataDel === 1) {
+                                    alert('Error borrando producto del carrito.');
+                                } else {
+                                    $('#uds' + productId).parent().parent().parent().fadeOut(function () {
+                                        $(this).remove();
+                                    });
+                                }
+                            }
+                        });
+                    }
+                }
+            }, error: function () {
+                alert("Error ajax agregando al carrito!!!!");
+            }
+        });
+
+    });
+    $('.borrarLinea').click(function () {
+        var td1 = $(this).parent().parent().find('td:eq(1)');
+        var productId = td1.find('span:eq(0)').attr('id').split('uds')[1];
+        $.ajax({
+            url: "/carrito/borrar/" + productId,
+            type: "get",
+            success: function (dataDel) {
+                if (dataDel === 1) {
+                    alert('Error borrando producto del carrito.');
+                } else {
+
+                    $('#uds' + productId).parent().parent().parent().fadeOut(function () {
+                        $(this).remove();
+                    });
+                }
+            }
+        });
+    });
+
+    $('.totalItemsCart').change(function () {
+        $.ajax({
+            url: "/carrito/numero",
+            type: "get",
+            success: function (data) {
+                $(this).html(data);
+            }
+        });
+    });
+
+    $('.table').each('tr', function () {
+    
+            $(this).find('td:eq(2)').css('background-color', 'yellow');
+    
+    });
 });
+
+function showProductSellPrice(qty, price) {
+    return qty * price;
+}

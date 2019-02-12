@@ -19,7 +19,7 @@
 <div class="mx-auto">
 
     <div class="card ">
-        <input type="hidden" value="{{$producto->id}}" id="productId">
+        <span class="hidden productId" >{{$producto->id}}</span>
 
         <div>
             <a href="{{url('product/'.$producto->id)}}"><img class="card-img-top" src="{{url('images/'.$producto->id)}}.png" alt="Card image cap"></a></div>

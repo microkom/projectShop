@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('carrito', 'AddToCartController@getCarrito');
 Route::get('category/{category}', 'CategoriesController@getCategory');
 
 Route::get('category/{category}/{subCategory}', 'CategoriesController@getSubCategory');
@@ -26,15 +26,12 @@ Route::post('user/admin/nuevoproducto', 'UsersController@addProduct');
 Route::get('user/admin/editarproducto/{id}', 'UsersController@editarProducto');
 Route::put('user/admin/editarproducto/{id}', 'UsersController@editProduct');
 
+Route::get('carrito/borrar/{id}', 'AddToCartController@delCarrito');
+Route::get('carrito/numero', 'AddToCartController@numeroCarrito');
+Route::get('carrito/{id}/menos', 'AddToCartController@unoMenosCarrito');
+Route::get('carrito/{id}', 'AddToCartController@addCarrito');
 
-Route::get('carrito/borrar/{id}', 'CarritoController@delCarrito');
 
-Route::post('session', 'AddToCartController@addToSession');
-
-Route::get('xs', 'AddToCartController@viewSession');
-
-Route::get('carrito/{id}', 'CarritoController@addCarrito');
-Route::get('carrito', 'CarritoController@getCarrito');
 
 
 
