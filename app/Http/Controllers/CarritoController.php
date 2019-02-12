@@ -22,13 +22,12 @@ class CarritoController extends Controller
         $producto = Product::find($id);
         if(!empty($_SESSION['carrito'])){
             foreach($_SESSION['carrito'] as $key => $valor){
-                if($valor->id != $id){
-                    array_push($_SESSION['carrito'], $producto);
-                    return redirect('product/'. $id);
-                } else {
+                if($valor->id == $id){
                     return redirect('product/'. $id);
                 }
             }
+            array_push($_SESSION['carrito'], $producto);
+            return redirect('product/'. $id);
         } else {
             array_push($_SESSION['carrito'], $producto);
             return redirect('product/'. $id);
@@ -43,7 +42,6 @@ class CarritoController extends Controller
                 return redirect('/carrito');
             }
         }
-        exit();
         return redirect('/carrito');
     }
 

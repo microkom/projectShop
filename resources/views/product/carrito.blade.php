@@ -53,8 +53,8 @@
 
 </form>
 @php
-if(isset($_SESSION['listaCarrito']))
-var_dump($_SESSION['listaCarrito']);
+if(isset($_SESSION['carrito']))
+var_dump($_SESSION['carrito']);
 @endphp
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
@@ -65,7 +65,7 @@ function ajax(id,cant,price){
     // Create some variables we need to send to our PHP file
     var url = "my_parse_file.php";
     var pId = 'price'+id;
-    var vars = "id="+id+"&price="+price+"&cant="+cant;
+    var vars = "id="+id+"&price="+price+"&uds"+id+"="+cant;
                 hr.open("POST", url, true);
                 // Set content type header information for sending url encoded variables in the request
                 hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
